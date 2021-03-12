@@ -1,9 +1,37 @@
-import React from 'react';
+import React, {forwardRef}  from 'react';
 import styled from 'styled-components';
+import SidebarOption from '../SidebarOption/SidebarOption';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import CreateIcon from '@material-ui/icons/Create';
+import InsertCommentIcon from '@material-ui/icons/InsertComment';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
+import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import AppsIcon from '@material-ui/icons/Apps';
+import FileCopyIcon from '@material-ui/icons/FileCopy';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import { SvgIconProps } from '@material-ui/core';
 
-function SideBar() {
+// import {Icons,Action, MaterialTableProps} from 'material-table';
+// import { SvgIconProps } from '@material-ui/core/SvgIcon';
+
+// const tableIcons: Icons = {
+//     InsertComment: () => <InsertCommentIcon />,
+//     Drafts: () => <DraftsIcon />,
+//     BookmarkBorder: () => <BookmarkBorderIcon />,
+//     BookmarkBorder: () => <BookmarkBorderIcon />,
+//     PeopleAlt: () => <PeopleAltIcon />,
+//     Apps: () => <AppsIcon />,
+//     FileCopy: () => <FileCopyIcon />,
+//     ExpandLess: () => <ExpandLessIcon />,
+    
+//   };
+//   const icons = {
+//     InsertComment: props => <InsertCommentIcon {...props} />,
+   
+//   }
+  
+const SideBar: React.FC =() => {
     return (
         <SidebarContainer>
             <SidebarHeader>
@@ -16,6 +44,16 @@ function SideBar() {
                 </SidebarInfo>
                      <CreateIcon />
                 </SidebarHeader>    
+
+
+                <SidebarOption title="Threaads" Icon={InsertCommentIcon}/>
+                <SidebarOption Icon={InsertCommentIcon} title="Threaads" /> 
+                <SidebarOption Icon={DraftsIcon} title="Mentions & reactions"/>
+                <SidebarOption Icon={BookmarkBorderIcon} title="Saved items" />
+                <SidebarOption Icon={PeopleAltIcon} title="People & user groups" />
+                <SidebarOption Icon={AppsIcon} title="Apps" />
+                <SidebarOption Icon={FileCopyIcon} title="File browser" />
+                <SidebarOption Icon={ExpandLessIcon} title="Show less" />
             </SidebarContainer>
     )
 }
@@ -30,6 +68,7 @@ border-top: 1px solid #49274b;
 max-width: 260px;
 margin-top: 60px;
 `;
+
 const SidebarHeader = styled.div`
 display: flex;
 border-bottom: 1px solid #49274b;
@@ -43,6 +82,7 @@ padding: 13px;
     border-radius: 999px;
 }
 `;
+
 const SidebarInfo = styled.div`
 flex: 1;
 > h2 {

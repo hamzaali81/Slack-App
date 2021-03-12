@@ -2269,6 +2269,14 @@
   "resolved" "https://registry.npmjs.org/@types/long/-/long-4.0.1.tgz"
   "version" "4.0.1"
 
+"@types/material-ui@^0.21.8":
+  "integrity" "sha512-Rsx3tRNoYkidDKfMfh+cegtOHMl73akzKnQ5pzxTrbx5oaUXLtG6YVlvtS43uebOSTDf8GQNaseB52r3zVagEg=="
+  "resolved" "https://registry.npmjs.org/@types/material-ui/-/material-ui-0.21.8.tgz"
+  "version" "0.21.8"
+  dependencies:
+    "@types/react" "*"
+    "@types/react-addons-linked-state-mixin" "*"
+
 "@types/minimatch@*":
   "integrity" "sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA=="
   "resolved" "https://registry.npmjs.org/@types/minimatch/-/minimatch-3.0.3.tgz"
@@ -2313,6 +2321,13 @@
   "integrity" "sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug=="
   "resolved" "https://registry.npmjs.org/@types/q/-/q-1.5.4.tgz"
   "version" "1.5.4"
+
+"@types/react-addons-linked-state-mixin@*":
+  "integrity" "sha512-3UF7Szd3JyuU+z90kqu8L4VdDWp7SUC0eRjV2QmMEliaHODGLi5XyO5ctS50K/lG6fjC0dSAPVbvnqv0nPoGMQ=="
+  "resolved" "https://registry.npmjs.org/@types/react-addons-linked-state-mixin/-/react-addons-linked-state-mixin-0.14.21.tgz"
+  "version" "0.14.21"
+  dependencies:
+    "@types/react" "*"
 
 "@types/react-dom@*":
   "integrity" "sha512-Icd9KEgdnFfJs39KyRyr0jQ7EKhq8U6CcHRMGAS45fp5qgUvxL3ujUCfWFttUK2UErqZNj97t9gsVPNAqcwoCg=="
