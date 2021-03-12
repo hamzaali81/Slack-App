@@ -57,4 +57,11 @@ flex: 1;
   font-weight: 400;
   align-items: center; 
 }
+
+> h3 > .MuiSvgIcon--root{
+    font-size: 14px;
+    margin-top: 1px;
+    margin-right: 2px;
+    color: green;
+}
 `;
