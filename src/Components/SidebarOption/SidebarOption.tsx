@@ -2,14 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { SvgIconProps } from '@material-ui/core';
 import { db } from './../../firebase';
+// import { useCollection } from 'react-firebase-hooks/firestore';
 
 interface SidebarProps {
-    Icon: (props: SvgIconProps) => JSX.Element;
+    Icon?: (props: SvgIconProps) => JSX.Element;
     title: string;
     addChannelOption?: any;
+    key?: any;
+    id?: any;
   }
-const SidebarOption:React.FC<SidebarProps> =({ Icon,title,addChannelOption })=> {
-    console.log(title);
+const SidebarOption:React.FC<SidebarProps> =({ Icon,title,addChannelOption,id })=> {
+      
+
     
     const addChannel = ()=>{
         console.log('Hello');
@@ -17,7 +21,7 @@ const SidebarOption:React.FC<SidebarProps> =({ Icon,title,addChannelOption })=> 
         const channelName = prompt('Please enter the channe name');
         
         if(channelName){
-        db.collection('room').add({
+        db.collection('rooms').add({
             name: channelName
         })
         }
@@ -69,4 +73,7 @@ cursor: pointer;
      padding: 15px;
  }
 `;
-const SidebarOptionChannel = styled.div``;
+const SidebarOptionChannel = styled.div`
+padding: 10px 0;
+font-weight: 300;
+`;

@@ -5837,7 +5837,7 @@
     "locate-path" "^5.0.0"
     "path-exists" "^4.0.0"
 
-"firebase@^8.3.0":
+"firebase@^8.3.0", "firebase@>= 8.0.0":
   "integrity" "sha512-Dyc16NwXth4TIJ12doQkUnwSrTqlJ1sCmTIOqFdCPT+EBMgD7jAj3cy/fnbRM9YdQ0CJYXVSz4aC/fJbDKSn8A=="
   "resolved" "https://registry.npmjs.org/firebase/-/firebase-8.3.0.tgz"
   "version" "8.3.0"
@@ -10236,6 +10236,11 @@
   "integrity" "sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew=="
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.9.tgz"
   "version" "6.0.9"
+
+"react-firebase-hooks@^3.0.2":
+  "integrity" "sha512-rkxX/a3yDDth0znn38mvTr7m6VbB53sRz1ZGI/+Bj0vUZk0djKsB/6k2ABHzGZH7PUnYw/fNg2+gnJ9hHrRFAQ=="
+  "resolved" "https://registry.npmjs.org/react-firebase-hooks/-/react-firebase-hooks-3.0.2.tgz"
+  "version" "3.0.2"
 
 "react-is@^16.12.0", "react-is@^16.13.1", "react-is@^16.6.0", "react-is@^16.7.0", "react-is@^16.8.0 || ^17.0.0", "react-is@^16.8.1", "react-is@^16.8.4", "react-is@>= 16.8.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
