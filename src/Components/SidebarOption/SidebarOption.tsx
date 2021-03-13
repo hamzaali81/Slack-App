@@ -1,18 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SvgIconProps } from '@material-ui/core';
-
+import { db } from './../../firebase';
 
 interface SidebarProps {
     Icon: (props: SvgIconProps) => JSX.Element;
-    title: string,
-    addChannelOption: 
+    title: string;
+    addChannelOption?: any;
   }
-const SidebarOption:React.FC<SidebarProps> =({ Icon,title, addChannelOption })=> {
+const SidebarOption:React.FC<SidebarProps> =({ Icon,title,addChannelOption })=> {
     console.log(title);
     
+    const addChannel = ()=>{
+        console.log('Hello');
+        
+        const channelName = prompt('Please enter the channe name');
+        
+        if(channelName){
+        db.collection('room').add({
+            name: channelName
+        })
+        }
+
+    }
+    const selectChannel = ()=> {
+
+    }
+
     return (
-        <SidebarOptionContainer>
+        <SidebarOptionContainer 
+        onClick={addChannelOption ? addChannel : selectChannel}
+        >
             {Icon && <Icon fontSize='small' style={{padding: 10}} />}
 
             {Icon ? (

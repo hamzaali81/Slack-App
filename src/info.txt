@@ -1,0 +1,3 @@
+firebase init firestore
+// Deploy your .rules file
+firebase deploy --only firestore:rules

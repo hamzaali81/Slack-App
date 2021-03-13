@@ -12,7 +12,6 @@ import FileCopyIcon from '@material-ui/icons/FileCopy';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
-import { SvgIconProps } from '@material-ui/core';
 
 // import {Icons,Action, MaterialTableProps} from 'material-table';
 // import { SvgIconProps } from '@material-ui/core/SvgIcon';
@@ -59,7 +58,7 @@ const SideBar: React.FC =() => {
                 <hr/>
                 <SidebarOption Icon={ExpandMoreIcon} title="Channel" />
                 <hr/>
-                <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel" />
+                <SidebarOption Icon={AddIcon} addChannelOption  title="Add Channel" />
                 
             </SidebarContainer>
     )
