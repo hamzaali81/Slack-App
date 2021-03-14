@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { SvgIconProps } from '@material-ui/core';
 import { db } from './../../firebase';
-// import { useCollection } from 'react-firebase-hooks/firestore';
+import { useDispatch } from 'react-redux';
+import { enterRoom } from './../../features/appSlice';
 
 interface SidebarProps {
     Icon?: (props: SvgIconProps) => JSX.Element;
@@ -12,24 +13,27 @@ interface SidebarProps {
     id?: any;
   }
 const SidebarOption:React.FC<SidebarProps> =({ Icon,title,addChannelOption,id })=> {
-      
+    const dispatch = useDispatch();  
 
-    
     const addChannel = ()=>{
         console.log('Hello');
-        
         const channelName = prompt('Please enter the channe name');
-        
         if(channelName){
         db.collection('rooms').add({
             name: channelName
         })
         }
-
     }
+
     const selectChannel = ()=> {
+        if (id){
+        dispatch(enterRoom({
+            roomId:id
+        }));
+        }
 
-    }
+    };
+
 
     return (
         <SidebarOptionContainer 
