@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import { db } from './../../firebase';
 import firebase from 'firebase';
+import { useCollection } from 'react-firebase-hooks/firestore';
+
 
 interface ChatProps{
     channelName?: any;
-    channelId: any
+    channelId?: any
  
 }
 
@@ -15,7 +17,6 @@ const ChatInput :React.FC<ChatProps> =({channelName, channelId})=> {
     // const inputRef = useRef(null);
     const [input, setInput] = useState("");
     console.log(channelId);
-    
     
     const sendMessage = (e:any)=> {
         e.preventDefault(); //Prevents refresh
