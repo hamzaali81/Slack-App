@@ -9,11 +9,7 @@ import { useCollection, useDocument } from 'react-firebase-hooks/firestore';
 import { db } from './../../firebase';
 import Message from './../Message/Message'; 
 
-interface ChatRef{
-    chatRef?: any;
-} 
-
-const Chat: React.FC<ChatRef>=()=> {
+const Chat: React.FC=()=> {
     const chatRef = useRef(null);
     const roomId = useSelector(selectRoomId);
     const [roomDetails] = useDocument(
@@ -30,12 +26,12 @@ const Chat: React.FC<ChatRef>=()=> {
        .orderBy("timestamp","desc")
     ); 
 
-    useEffect(() => {
-        chatRef.current.scrollIntoView({
-            behavior: "smooth",
-        });
+    // useEffect(() => {
+    //     chatRef.current.scrollIntoView({
+    //         behavior: "smooth",
+    //     });
 
-    }, [roomId,loading])
+    // }, [roomId,loading])
      
     
     console.log('roomDetails?.data()',roomDetails?.data());

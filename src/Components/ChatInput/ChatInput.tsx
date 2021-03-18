@@ -40,12 +40,15 @@ const ChatInput :React.FC<ChatProps> =({channelName, channelId, chatRef})=> {
         chatRef.current.scrollIntoView({
             behavior: "smooth",
         });
-        setInput("");
+        setInput(" ");
        }
     return (
         <ChatInputContainer>
              <form >
-                 <input type="text" placeholder={`Message #ROOM`}/>
+                 <input 
+                 onChange={(e)=>setInput(e.target.value)}
+                 type="text"
+                 placeholder={`Message #ROOM`}/>
                  <Button hidden type='submit' onClick={sendMessage}>Send</Button>
              </form>
         </ChatInputContainer>
