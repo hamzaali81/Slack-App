@@ -13,10 +13,10 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import { db } from '../../firebase';
-
+import { db,auth } from '../../firebase';
 // import {Icons,Action, MaterialTableProps} from 'material-table';
 // import { SvgIconProps } from '@material-ui/core/SvgIcon';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 // const tableIcons: Icons = {
 //     InsertComment: () => <InsertCommentIcon />,
@@ -36,7 +36,7 @@ import { db } from '../../firebase';
   
 const SideBar: React.FC =() => {
     const [channels, loading, error] = useCollection(db.collection("rooms"));
-
+    const [user] = useAuthState(auth);
     return (
         <SidebarContainer>
             <SidebarHeader>
