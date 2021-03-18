@@ -12,7 +12,7 @@ import Chat from './Components/Chat/Chat';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import Login from './Components/Screens/Login/Login';
 import { auth } from './firebase';
-
+var Spinner = require('react-spinkit');
 // npm i react-spinkit
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     return (
       <AppLoading>
         <AppLoadingContents>
-             <img src="" alt="" />
+             <img src="https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg" alt="logo" />
 
              <Spinner 
              name="ball-spin-fade-loader"

@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useEffect, useRef} from 'react';
 import styled from 'styled-components';
 import StarOutlineIcon from '@material-ui/icons/StarOutline';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
@@ -9,8 +9,11 @@ import { useCollection, useDocument } from 'react-firebase-hooks/firestore';
 import { db } from './../../firebase';
 import Message from './../Message/Message'; 
 
+interface ChatRef{
+    chatRef?: any;
+} 
 
-function Chat() {
+const Chat: React.FC<ChatRef>=()=> {
     const chatRef = useRef(null);
     const roomId = useSelector(selectRoomId);
     const [roomDetails] = useDocument(
@@ -27,12 +30,12 @@ function Chat() {
        .orderBy("timestamp","desc")
     ); 
 
-    // useEffect(() => {
-    //     chatRef?.current?.scrollIntoView({
-    //         behavior: "smooth",
-    //     });
+    useEffect(() => {
+        chatRef.current.scrollIntoView({
+            behavior: "smooth",
+        });
 
-    // }, [roomId,loading])
+    }, [roomId,loading])
      
     
     console.log('roomDetails?.data()',roomDetails?.data());
@@ -59,7 +62,7 @@ function Chat() {
                 {/* list out the message */}
                 {roomMessage?.docs.map((doc)=> {
                     const { message, timestamp, user,userImage } = doc.data();
-                    // console.log(message);
+                    console.log(message);
                     
                     return (
                     <Message 
